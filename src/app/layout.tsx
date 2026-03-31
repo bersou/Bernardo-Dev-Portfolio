@@ -5,8 +5,22 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "José Moraes Bernardo | Quality & Code",
-  description: "Especialista em Controle de Qualidade Industrial & Full Stack Developer.",
+  title: "Bernardo | Qualidade & Dev Web",
+  description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+  icons: {
+    icon: "/favicon.png",
+  },
+  openGraph: {
+     title: "Bernardo | Qualidade & Dev Web",
+     description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bernardo | Qualidade & Dev Web",
+    description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+    images: ["/og-image.png"],
+  }
 };
 
 export default function RootLayout({
