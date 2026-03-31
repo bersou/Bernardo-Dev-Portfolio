@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import * as Lucide from 'lucide-react';
 
@@ -72,11 +72,23 @@ const projects = [
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play().catch(e => console.log("Autoplay blocked:", e));
     }
+
+    // Dynamic greeting logic
+    const updateGreeting = () => {
+      const hour = new Date().getHours();
+      let text = "BOM DIA";
+      if (hour >= 12 && hour < 18) text = "BOA TARDE";
+      if (hour >= 18 || hour < 5) text = "BOA NOITE";
+      setGreeting(text);
+    };
+
+    updateGreeting();
   }, []);
 
   return (
@@ -118,6 +130,20 @@ export default function Home() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
         >
+          {/* DYNAMIC GREETING BADGE */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mb-6 flex justify-center"
+          >
+            <div className="px-5 py-1.5 glass-bento rounded-full border border-brand-orange/20">
+               <span className="text-[10px] font-black tracking-[0.4em] text-brand-orange">
+                {greeting}, SEJA BEM-VINDO AO MEU ESPAÇO
+               </span>
+            </div>
+          </motion.div>
+
           <motion.h1 
             whileHover={{ 
               scale: 1.02, 
