@@ -12,14 +12,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://landpagedev.netlify.app"),
-  title: "Bernardo | Qualidade & Dev Web",
-  description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+  title: "Bernardo | Dev Web",
+  description: "Eficiência industrial através de web Sistem por Bernardo.",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-     title: "Bernardo | Qualidade & Dev Web",
-     description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+     title: "Bernardo | Dev Web",
+     description: "Eficiência industrial através de web Sistem por Bernardo.",
      url: "https://landpagedev.netlify.app",
      siteName: "Bernardo Portfolio",
      images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
          url: "/og-image.png", 
          width: 1200, 
          height: 630,
-         alt: "Bernardo Portfolio - Qualidade & Dev Web"
+         alt: "Bernardo Portfolio - Dev Web"
        }
      ],
      locale: "pt_BR",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bernardo | Qualidade & Dev Web",
-    description: "Trabalhos de excelência em desenvolvimento web e qualidade industrial por Bernardo.",
+    title: "Bernardo | Dev Web",
+    description: "Eficiência industrial através de web Sistem por Bernardo.",
     images: ["/og-image.png"],
   }
 };
