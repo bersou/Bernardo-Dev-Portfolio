@@ -124,10 +124,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(e => console.log("Autoplay blocked:", e));
-    }
-
     // Dynamic greeting logic
     const updateGreeting = () => {
       const hour = new Date().getHours();
