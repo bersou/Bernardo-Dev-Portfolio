@@ -21,13 +21,14 @@ export const metadata: Metadata = {
      title: "Bernardo | Dev Web",
      description: "Eficiência industrial através de web Sistem por Bernardo.",
      url: "https://landpagedev.netlify.app",
-     siteName: "Bernardo Portfolio",
+     siteName: "Bernardo | Dev Web",
      images: [
        { 
-         url: "/og-image.png", 
+         url: "https://landpagedev.netlify.app/og-image.png", 
          width: 1200, 
          height: 630,
-         alt: "Bernardo Portfolio - Dev Web"
+         alt: "Bernardo Dev Web Portfolio - Industrial Efficiency",
+         type: "image/png",
        }
      ],
      locale: "pt_BR",
