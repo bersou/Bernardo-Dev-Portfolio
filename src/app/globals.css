@@ -79,6 +79,8 @@ body {
   animation: spark-drift 15s linear infinite;
   opacity: 0.25;
   filter: blur(1px);
+  will-change: transform;
+  contain: strict;
 }
 
 @keyframes spark-drift {
@@ -113,6 +115,7 @@ body {
   backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  contain: layout paint;
 }
 
 .glass-bento:hover {
@@ -134,4 +137,10 @@ body {
 }
 ::selection {
   background: rgba(255, 165, 0, 0.3);
+}
+
+.gpu-accelerated {
+  will-change: transform, opacity, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

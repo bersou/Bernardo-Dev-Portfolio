@@ -259,7 +259,8 @@ export default function Home() {
             <motion.h2 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="text-5xl font-black mb-12 uppercase tracking-tighter"
+              viewport={{ once: true, amount: 0.2 }}
+              className="text-5xl font-black mb-12 uppercase tracking-tighter gpu-accelerated"
             >
               TÉCNICA E<br/><span className="text-white/20">DEDICAÇÃO</span>
             </motion.h2>
@@ -273,8 +274,9 @@ export default function Home() {
                   key={idx} 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: idx * 0.2 }}
-                  className="glass-bento p-8 flex items-start gap-6 group hover:bg-brand-orange/[0.05] transition-all"
+                  className="glass-bento p-8 flex items-start gap-6 group hover:bg-brand-orange/[0.05] transition-all gpu-accelerated"
                 >
                   <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center p-2 text-brand-gold flex-shrink-0 group-hover:bg-brand-gold/20 transition-all">
                     {item.icon}
@@ -293,8 +295,9 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
-              className="relative group"
+              className="relative group gpu-accelerated"
             >
               <div className="absolute inset-0 bg-brand-orange/40 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative w-64 h-64 md:w-96 md:h-96 glass-bento rounded-4xl overflow-hidden p-2">
@@ -304,7 +307,7 @@ export default function Home() {
                     className="relative w-full h-full transition-all duration-700 md:!filter-none md:!scale-105"
                   >
                     <Image 
-                      src="https://res.cloudinary.com/dnymahpi7/image/upload/v1774924019/PSX_20260111_105950_l7ygas.jpg"
+                      src="https://res.cloudinary.com/dnymahpi7/image/upload/f_auto,q_auto,w_800/v1774924019/PSX_20260111_105950_l7ygas.jpg"
                       alt="Bernardo"
                       fill
                       sizes="(max-width: 768px) 256px, 384px"
@@ -337,6 +340,8 @@ export default function Home() {
         <motion.div
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.2 }}
+           className="gpu-accelerated"
         >
           <h2 className="text-4xl md:text-6xl font-black mb-12 uppercase tracking-tighter">PRONTO PARA<br/><span className="text-brand-orange drop-shadow-[0_0_20px_rgba(255,69,0,0.5)]">DESENVOLVER?</span></h2>
           <a 
