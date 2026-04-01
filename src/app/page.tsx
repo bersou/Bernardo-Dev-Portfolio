@@ -210,7 +210,7 @@ export default function Home() {
               { href: "https://linkedin.com/in/josemoraesbernardo", title: "LinkedIn", icon: <LinkedinIcon size={24} /> },
               { href: "https://www.instagram.com/jose_bernardo._/", title: "Instagram", icon: <InstagramIcon size={24} />, hoverColor: "hover:text-[#E4405F]" },
               { href: "https://www.facebook.com/profile.php?id=61587713060348", title: "Facebook", icon: <FacebookIcon size={24} />, hoverColor: "hover:text-[#1877F2]" },
-              { href: "https://wa.me/5551986389656?text=Ol%C3%A1%20Bernardo%2C%20visitei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20web%2Findustrial!", title: "WhatsApp", icon: <WhatsappIcon size={24} />, hoverColor: "hover:text-[#25D366]" },
+              { href: "https://wa.me/5551986389656?text=Ol%C3%A1%20Bernardo%2C%20tudo%20bem%3F%20Visitei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20web", title: "WhatsApp", icon: <WhatsappIcon size={24} />, hoverColor: "hover:text-[#25D366]" },
               { href: "mailto:josemoraesbernardo@gmail.com", title: "Email", icon: <GmailIcon size={24} /> }
             ].map((social, si) => (
               <motion.a 
@@ -313,7 +313,7 @@ export default function Home() {
                     alt="Bernardo"
                     fill
                     sizes="(max-width: 768px) 256px, 384px"
-                    className="object-cover object-top scale-105 group-hover:scale-110 grayscale-0 group-hover:grayscale transition-all duration-1000"
+                    className="object-cover object-top scale-105 group-hover:scale-110 group-active:scale-110 grayscale-0 group-hover:grayscale group-active:grayscale transition-all duration-1000"
                     priority
                   />
                 </div>
