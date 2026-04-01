@@ -5,8 +5,12 @@
   --color-brand-orange: #FFA500;
   --color-brand-peach: #FFDAB9;
   --color-brand-muted: #0A0A0A;
+  --color-accent-cyan: #00e5ff;
+  --color-accent-purple: #6c47ff;
   --radius-3xl: 24px;
   --radius-4xl: 32px;
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-inter);
 }
 
 :root {
@@ -17,7 +21,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }

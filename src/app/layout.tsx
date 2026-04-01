@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: '--font-mono' });
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -18,16 +19,16 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   openGraph: {
-     title: "Bernardo | Dev Web",
-     description: "Eficiência industrial através de web Sistem por Bernardo.",
+     title: "Industrial Web Systems Developer | Portfolio",
+     description: "Engenharia de software voltada para eficiência industrial e automação de sistemas críticos.",
      url: "https://landpagedev.netlify.app",
-     siteName: "Bernardo | Dev Web",
+     siteName: "Industrial Web Systems Developer",
      images: [
        { 
          url: "https://landpagedev.netlify.app/og-image.png", 
          width: 1200, 
          height: 630,
-         alt: "Bernardo Dev Web Portfolio - Industrial Efficiency",
+         alt: "Industrial Web Systems Developer - Professional Tech Portfolio",
          type: "image/png",
        }
      ],
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bernardo | Dev Web",
-    description: "Eficiência industrial através de web Sistem por Bernardo.",
+    title: "Industrial Web Systems Developer | Portfolio",
+    description: "Engenharia de software voltada para eficiência industrial e automação de sistemas críticos.",
     images: ["/og-image.png"],
   }
 };
@@ -49,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+      <body className={`${inter.variable} ${mono.variable} font-sans bg-black text-white antialiased`}>
         {children}
       </body>
     </html>
