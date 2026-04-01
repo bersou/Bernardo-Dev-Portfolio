@@ -157,23 +157,23 @@ export default function Home() {
             Eficiência industrial através de web Sistem
           </p>
           
-          <div className="mt-12 flex justify-center flex-wrap gap-4 px-4 overflow-hidden">
-            <motion.a whileHover={{ y: -5 }} href="https://github.com/bersou" target="_blank" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all" title="GitHub">
+          <div className="mt-12 grid grid-cols-3 md:grid-cols-6 gap-4 max-w-sm md:max-w-none mx-auto px-4 overflow-hidden place-items-center">
+            <motion.a whileHover={{ y: -5 }} href="https://github.com/bersou" target="_blank" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all flex items-center justify-center w-full" title="GitHub">
               <GithubIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5 }} href="https://linkedin.com/in/josemoraesbernardo" target="_blank" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all" title="LinkedIn">
+            <motion.a whileHover={{ y: -5 }} href="https://linkedin.com/in/josemoraesbernardo" target="_blank" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all flex items-center justify-center w-full" title="LinkedIn">
               <LinkedinIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5 }} href="https://www.instagram.com/jose_bernardo._/" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#E4405F] transition-all" title="Instagram">
+            <motion.a whileHover={{ y: -5 }} href="https://www.instagram.com/jose_bernardo._/" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#E4405F] transition-all flex items-center justify-center w-full" title="Instagram">
               <InstagramIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5 }} href="https://www.facebook.com/profile.php?id=61587713060348" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#1877F2] transition-all" title="Facebook">
+            <motion.a whileHover={{ y: -5 }} href="https://www.facebook.com/profile.php?id=61587713060348" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#1877F2] transition-all flex items-center justify-center w-full" title="Facebook">
               <FacebookIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5, scale: 1.1 }} href="https://wa.me/5551984648522" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#25D366] transition-all" title="WhatsApp">
+            <motion.a whileHover={{ y: -5, scale: 1.1 }} href="https://wa.me/5551984648522" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#25D366] transition-all flex items-center justify-center w-full" title="WhatsApp">
               <WhatsappIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5 }} href="mailto:josemoraesbernardo@gmail.com" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all" title="Email">
+            <motion.a whileHover={{ y: -5 }} href="mailto:josemoraesbernardo@gmail.com" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all flex items-center justify-center w-full" title="Email">
               <GmailIcon size={24} />
             </motion.a>
           </div>
