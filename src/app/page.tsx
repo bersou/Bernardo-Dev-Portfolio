@@ -94,6 +94,16 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [greeting, setGreeting] = useState('');
   
+  // Ref for scroll-linked profile animation
+  const experienceRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: experienceRef,
+    offset: ["start end", "end start"]
+  });
+
+  const photoGrayscale = useTransform(scrollYProgress, [0.4, 0.6], ["grayscale(100%)", "grayscale(0%)"]);
+  const photoScale = useTransform(scrollYProgress, [0.4, 0.6], [1.02, 1.1]);
+
   // Audio effects
   const playAmbient = () => {
     const audio = new Audio('/mixkit-cat-walk-371.mp3'); // Local Mixkit Track
@@ -145,9 +155,9 @@ export default function Home() {
           muted 
           loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105"
+          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105 blur-[1px]"
         >
-          <source src="https://cdn.pixabay.com/video/2020/09/24/50841-463282226_large.mp4" type="video/mp4" />
+          <source src="/Flame.mp4" type="video/mp4" />
         </video>
         <div className="sparks-layer" />
         <div className="noon-wave" />
@@ -259,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* QUALITY & PROFILE SECTION */}
-      <section id="experience" className="relative z-10 px-6 pb-48 max-w-7xl mx-auto">
+      <section id="experience" ref={experienceRef} className="relative z-10 px-6 pb-48 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
           <div className="order-2 md:order-1">
@@ -306,14 +316,19 @@ export default function Home() {
               <div className="absolute inset-0 bg-brand-orange/40 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative w-64 h-64 md:w-96 md:h-96 glass-bento rounded-4xl overflow-hidden p-2">
                 <div className="relative w-full h-full rounded-[28px] overflow-hidden">
-                  <Image 
-                    src="https://res.cloudinary.com/dnymahpi7/image/upload/v1774924019/PSX_20260111_105950_l7ygas.jpg"
-                    alt="Bernardo"
-                    fill
-                    sizes="(max-width: 768px) 256px, 384px"
-                    className="object-cover object-top scale-105 group-hover:scale-110 group-active:scale-110 grayscale-0 group-hover:grayscale group-active:grayscale transition-all duration-1000"
-                    priority
-                  />
+                  <motion.div 
+                    style={{ filter: photoGrayscale, scale: photoScale }}
+                    className="relative w-full h-full transition-all duration-700 md:!filter-none md:!scale-105"
+                  >
+                    <Image 
+                      src="https://res.cloudinary.com/dnymahpi7/image/upload/v1774924019/PSX_20260111_105950_l7ygas.jpg"
+                      alt="Bernardo"
+                      fill
+                      sizes="(max-width: 768px) 256px, 384px"
+                      className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                      priority
+                    />
+                  </motion.div>
                 </div>
               </div>
               <div className="mt-8 text-center">
