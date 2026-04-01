@@ -91,7 +91,6 @@ const projects = [
 ];
 
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [greeting, setGreeting] = useState('');
   
   // Ref for scroll-linked profile animation
@@ -145,18 +144,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white relative selection:bg-brand-gold/20 selection:text-brand-gold">
       
-      {/* NOON WAVE + FIRE VIDEO BACKGROUND */}
+      {/* NOON WAVE + SPARK EFFECTS BACKGROUND */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <video 
-          ref={videoRef}
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-15 scale-105 blur-[3px]"
-        >
-          <source src="/Flame.mp4" type="video/mp4" />
-        </video>
         <div className="sparks-layer" />
         <div className="noon-wave" />
         <div className="fire-accent" />
