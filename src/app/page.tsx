@@ -98,8 +98,8 @@ export default function Home() {
     offset: ["start start", "end end"]
   });
 
-  const photoGrayscale = useTransform(scrollYProgress, [0.15, 0.3], ["grayscale(100%)", "grayscale(0%)"]);
-  const photoScale = useTransform(scrollYProgress, [0.15, 0.3], [1.02, 1.1]);
+  const photoGrayscale = useTransform(scrollYProgress, [0.3, 0.45, 0.6], ["grayscale(0%)", "grayscale(100%)", "grayscale(0%)"]);
+  const photoScale = useTransform(scrollYProgress, [0.3, 0.45, 0.6], [1.02, 1.1, 1.02]);
 
   // Audio effects
   const playAmbient = () => {
@@ -308,7 +308,7 @@ export default function Home() {
                       alt="Bernardo"
                       fill
                       sizes="(max-width: 768px) 256px, 384px"
-                      className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                      className="object-cover object-top grayscale-0 group-hover:grayscale group-hover:scale-110 transition-all duration-1000"
                       priority
                     />
                   </motion.div>
