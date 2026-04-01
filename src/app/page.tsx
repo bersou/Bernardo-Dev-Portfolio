@@ -95,14 +95,12 @@ export default function Home() {
   const [greeting, setGreeting] = useState('');
   
   // Ref for scroll-linked profile animation
-  const experienceRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
-    target: experienceRef,
-    offset: ["start end", "end start"]
+    offset: ["start start", "end end"]
   });
 
-  const photoGrayscale = useTransform(scrollYProgress, [0.4, 0.6], ["grayscale(100%)", "grayscale(0%)"]);
-  const photoScale = useTransform(scrollYProgress, [0.4, 0.6], [1.02, 1.1]);
+  const photoGrayscale = useTransform(scrollYProgress, [0.15, 0.3], ["grayscale(100%)", "grayscale(0%)"]);
+  const photoScale = useTransform(scrollYProgress, [0.15, 0.3], [1.02, 1.1]);
 
   // Audio effects
   const playAmbient = () => {
@@ -155,7 +153,7 @@ export default function Home() {
           muted 
           loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105 blur-[1px]"
+          className="absolute inset-0 w-full h-full object-cover opacity-15 scale-105 blur-[3px]"
         >
           <source src="/Flame.mp4" type="video/mp4" />
         </video>
@@ -269,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* QUALITY & PROFILE SECTION */}
-      <section id="experience" ref={experienceRef} className="relative z-10 px-6 pb-48 max-w-7xl mx-auto">
+      <section id="experience" className="relative z-10 px-6 pb-48 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
           <div className="order-2 md:order-1">
