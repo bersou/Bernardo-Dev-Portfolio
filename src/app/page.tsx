@@ -153,14 +153,15 @@ export default function Home() {
           muted 
           loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-25 scale-105"
+          className="absolute inset-0 w-full h-full object-cover opacity-35 scale-105"
           onError={(e) => {
             console.log("Video source failed. Hiding video.");
             (e.target as HTMLVideoElement).style.display = 'none';
           }}
         >
-          <source src="https://cdn.pixabay.com/video/2021/08/10/84542-586701557_large.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2020/05/25/40114-425203303_large.mp4" type="video/mp4" />
         </video>
+        <div className="sparks-layer" />
         <div className="noon-wave" />
         <div className="fire-accent" />
         <div className="noon-line top-[45%]" />
