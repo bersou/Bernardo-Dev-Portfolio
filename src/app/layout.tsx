@@ -25,7 +25,7 @@ export const metadata: Metadata = {
      siteName: "Industrial Web Systems Developer",
      images: [
        { 
-         url: "https://landpagedev.netlify.app/og-preview-portfolio.png", 
+         url: "https://landpagedev.netlify.app/og-industrial-final.png", 
          width: 1200, 
          height: 630,
          alt: "Industrial Web Systems Developer - Professional Tech Portfolio",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industrial Web Systems Developer | Portfolio",
     description: "Engenharia de software voltada para eficiência industrial e automação de sistemas críticos.",
-    images: ["/og-preview-portfolio.png"],
+    images: ["/og-industrial-final.png"],
   }
 };
 

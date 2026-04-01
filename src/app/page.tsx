@@ -97,12 +97,10 @@ export default function Home() {
   // Ref for scroll-linked profile animation
   const experienceRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
-    target: experienceRef,
-    offset: ["start end", "center center"]
+    offset: ["start end", "end start"]
   });
 
-  const photoScale = useTransform(scrollYProgress, [0, 1], [1.3, 1.05]);
-  const photoGrayscale = useTransform(scrollYProgress, [0, 1], ["grayscale(100%)", "grayscale(0%)"]);
+  const photoScale = useTransform(scrollYProgress, [0.3, 0.6], [1.2, 1.05]);
 
   // Audio effects
   const playAmbient = () => {
@@ -155,13 +153,13 @@ export default function Home() {
           muted 
           loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-110 blur-[2px]"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 scale-105"
           onError={(e) => {
             console.log("Video source failed. Hiding video.");
             (e.target as HTMLVideoElement).style.display = 'none';
           }}
         >
-          <source src="https://cdn.pixabay.com/video/2020/09/24/50841-463282226_large.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2021/08/10/84542-586701557_large.mp4" type="video/mp4" />
         </video>
         <div className="noon-wave" />
         <div className="fire-accent" />
@@ -319,7 +317,15 @@ export default function Home() {
               <div className="absolute inset-0 bg-brand-orange/40 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative w-64 h-64 md:w-96 md:h-96 glass-bento rounded-4xl overflow-hidden p-2">
                   <motion.div 
-                    style={{ scale: photoScale, filter: photoGrayscale }}
+                    style={{ scale: photoScale }}
+                    animate={{ 
+                      filter: ["grayscale(0%)", "grayscale(100%)", "grayscale(0%)"] 
+                    }}
+                    transition={{ 
+                      duration: 8, 
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
                     className="relative w-full h-full rounded-[28px] overflow-hidden transition-all duration-300"
                   >
                     <Image 
