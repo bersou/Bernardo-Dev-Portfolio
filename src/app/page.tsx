@@ -170,7 +170,7 @@ export default function Home() {
             <motion.a whileHover={{ y: -5 }} href="https://www.facebook.com/profile.php?id=61587713060348" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#1877F2] transition-all flex items-center justify-center w-full" title="Facebook">
               <FacebookIcon size={24} />
             </motion.a>
-            <motion.a whileHover={{ y: -5, scale: 1.1 }} href="https://wa.me/5551984648522" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#25D366] transition-all flex items-center justify-center w-full" title="WhatsApp">
+            <motion.a whileHover={{ y: -5, scale: 1.1 }} href="https://wa.me/5551986389656?text=Ol%C3%A1%20Bernardo%2C%20visitei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20web%2Findustrial!" target="_blank" className="p-4 rounded-full glass-bento hover:text-[#25D366] transition-all flex items-center justify-center w-full" title="WhatsApp">
               <WhatsappIcon size={24} />
             </motion.a>
             <motion.a whileHover={{ y: -5 }} href="mailto:josemoraesbernardo@gmail.com" className="p-4 rounded-full glass-bento hover:text-brand-gold transition-all flex items-center justify-center w-full" title="Email">
