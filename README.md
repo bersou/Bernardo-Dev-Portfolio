@@ -1,4 +1,4 @@
-# 🚀 Bernardo Portfolio - High-End Industrial Dev
+# 🚀 Bernardo Portfolio - High-End Dev
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
